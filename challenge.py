@@ -1,6 +1,6 @@
+import re
 from requests_html import HTMLSession
 from bs4 import BeautifulSoup
-import re
 
 s = HTMLSession() 
 url = 'https://en.wikipedia.org/wiki/List_of_animal_names'
@@ -24,4 +24,3 @@ for animal in data:
     else:
         animal[4] = re.sub(r'\[.*?\]', '', animal[4])
         print('###### \n', animal[0], ':', animal[4])
-
